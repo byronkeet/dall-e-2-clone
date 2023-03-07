@@ -13,7 +13,7 @@ const Home = () => {
 		const fetchPosts = async () => {
 			try {
 				setLoading(true);
-				const response = await fetch('http://localhost:8080/api/v1/posts');
+				const response = await fetch('https://dall-e-2-clone-backend.onrender.com/api/v1/posts');
 				const data = await response.json();
 				setAllPosts(data.data.reverse());
 			} catch (error) {
